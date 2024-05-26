@@ -1,20 +1,25 @@
 # Product Credit Calculator
 
-Welcome to the **Product Credit Calculator**! 
+> **_NOTE:_**  This project is still in progress, therefore its repository is not completed. The descriptions below outline the intended goals and features of the repository.
+
+## Project Description
 This project is a web application designed to search, sort, and calculate credits for products. The application is built using Python, C++, Flask, React.js, and Docker.
+
+## Project Overview
+The Product Credit Calculator has a backend for calculations and a user-friendly frontend. The backend uses C++ and Python for data processing and API management. The frontend, built with React.js, provides a smooth interface. Docker is used to make the application easy to deploy and scale.
 
 ## Table of Contents
 
 - [Project Structure](#project-structure)
-- [Features](#features)
+- [Key Features](#key-features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
+- [Additional Information](#additional-information)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Project Structure
-
 ```
 product-credit-calculator/
 ├── docker-compose.yml
@@ -31,6 +36,7 @@ product-credit-calculator/
 │   │   ├── python/
 │   │   │   ├── app.py
 │   │   │   ├── calculator.py
+│   │   │   ├── sorting.py
 │   │   │   ├── scraper.py
 │   │   │   ├── models.py
 │   │   │   ├── requirements.txt
@@ -46,11 +52,15 @@ product-credit-calculator/
 │   │   ├── Dockerfile
 ```
 
-## Features
-- **Web Scraping:** Automatically scrape product data from various online stores.
-- **Product Search:** Search for products from different online stores.
-- **Sorting:** Sort products by price and other attributes.
-- **Credit Calculation:** Calculate the credit for a product.
+
+## Key Features
+
+- **Product Search and Sorting**: Easily find and organize products.
+- **Credit Calculation**: Calculate credits for products accurately.
+- **Web Scraping**: Automatically gather product data from external sources.
+- **RESTful API**: Manage and serve data using a Flask-based API.
+- **Responsive UI**: A smooth user experience with React.js.
+- **Containerization**: Easy deployment and scaling with Docker and Docker Compose.
 
 ## Installation
 
@@ -67,7 +77,7 @@ Follow these steps to set up the project on your local machine.
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/yourusername/product-credit-calculator.git
+    git clone https://github.com/bytebard02/product-credit-calculator.git
     cd product-credit-calculator
     ```
 
@@ -113,9 +123,35 @@ Follow these steps to set up the project on your local machine.
   - Docker
   - Docker Compose
 
+## Additional Information
+
+### Functions Assumed by the Application
+- **Administrator**: Manages product database, oversees scraping and calculation algorithms.
+- **User**: Searches for products, views sorted results, and calculates credits.
+
+### Data Flows
+- **Input**: Product data from web scraping, user search queries.
+- **Processing**: Data sorting, credit calculation.
+- **Output**: Sorted product lists, calculated credits.
+
+### Possible Future Functionalities
+- [ ] Real-time product data updates.
+- [ ] Advanced filtering options for product search.
+- [ ] User authentication and profile management.
+
+### Interaction Scenarios
+- **Search**: User enters search criteria, and results are displayed.
+- **Sort**: User applies sorting filters to organize results.
+- **Calculate**: User inputs data to calculate credits, and results are shown.
+
+### Academic Knowledge
+- **Data Structures and Algorithms (DSA)**: Efficient sorting and searching algorithms.
+- **Programming Approaches**: Object-oriented programming in C++ and Python.
+- **Course Concepts**: Web scraping techniques, API development, and containerization.
+
 ## Contributing
 
-We welcome contributions! Please follow these steps:
+All contributions are welcome! Please follow these steps:
 
 1. **Fork the repository.**
 2. **Create a new branch:**
