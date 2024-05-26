@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  flask:
+    build:
+      context: ./src/backend/python
+      dockerfile: Dockerfile
+    volumes:
+      - ./src/backend/python:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=8000
+    depends_on:
+      - cpp
+
+  cpp:
+    build:
+      context: ./src/backend/cpp
+      dockerfile: Dockerfile
+
+  react:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./src/frontend:/app
+    ports:
+      - "3000:80"
